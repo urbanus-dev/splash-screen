@@ -17,7 +17,7 @@ class _welcomeState extends State<welcome> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 60), () {
+    Future.delayed(const Duration(milliseconds: 60), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => splash()),

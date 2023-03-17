@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:welcome_screen/register.dart';
+import 'package:welcome_screen/scrolling.dart';
 class splash extends StatefulWidget {
   const splash({Key? key}) : super(key: key);
 
@@ -10,6 +11,14 @@ class splash extends StatefulWidget {
 
 class _splashState extends State<splash> {
   @override
+  void initState(){
+    super.initState();
+    Future.delayed(Duration(seconds: 4),(){
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>scroll()));
+    }
+
+    );
+  }
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
@@ -35,16 +44,16 @@ class _splashState extends State<splash> {
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        child:const Text("+"),
-        onPressed: (){
-          Navigator.push(context,
-          MaterialPageRoute(builder:
-          (context)=>const register(),
-          ),
-          );
-        },
-      ),
+      // floatingActionButton: FloatingActionButton(
+      //   child:const Text("+"),
+      //   onPressed: (){
+      //     Navigator.push(context,
+      //     MaterialPageRoute(builder:
+      //     (context)=>const register(),
+      //     ),
+      //     );
+      //   },
+      // ),
     );
   }
 }
