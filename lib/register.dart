@@ -15,6 +15,11 @@ class _registerState extends State<register> {
         centerTitle: true,
         backgroundColor: Colors.green,
       ),
+      body: Column(
+        children: const [
+          Text("welcome"),
+        ],
+      ),
     );
   }
 }
