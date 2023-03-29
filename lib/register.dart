@@ -10,7 +10,11 @@ class _registerState extends State<register> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
+      appBar: AppBar(
+        title:const  Text("welcome"),
+        centerTitle: true,
+        backgroundColor: Colors.green,
+      ),
     );
   }
 }
